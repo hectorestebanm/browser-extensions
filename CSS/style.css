@@ -1,0 +1,155 @@
+:root
+{
+    /* ### Neutral */
+    --Neutral_900: hsl(227, 75%, 14%);
+    --Neutral_800: hsl(226, 25%, 17%);
+    --Neutral_700: hsl(225, 23%, 24%);
+    --Neutral_600: hsl(226, 11%, 37%);
+    --Neutral_300: hsl(0, 0%, 78%);
+    --Neutral_200: hsl(217, 61%, 90%);
+    --Neutral_100: hsl(0, 0%, 93%);
+    --Neutral_0: hsl(200, 60%, 99%);
+    /* ### Red */
+    --Red_400: hsl(3, 86%, 64%);
+    --Red_500: hsl(3, 71%, 56%);
+    --Red_700: hsl(3, 77%, 44%);
+    /* ### Gradient */
+    --Light_Gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --Dark_Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);  
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--Neutral_900);
+    color: white;
+}
+
+body p
+{
+    font-size: 16px;
+}
+
+.main
+{
+    max-width: 375px;
+    padding: 15px;
+}
+
+.modo
+{
+    background-color: var(--Neutral_800);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.modo__logo
+{
+
+}
+
+.modo__moon
+{
+    background-color: var(--Neutral_700);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.state
+{
+    margin-bottom: 20px;
+}
+
+.state__h1
+{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.button__state
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.button__style
+{
+    font-size: 21px;
+    color: var(--Neutral_200);
+    background-color: var(--Neutral_700);
+    border: 1px solid var(--Neutral_600);
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.extensions__list
+{
+    background-color: var(--Neutral_800);
+    border-radius: 25px;
+    border: 2px solid var(--Neutral_600);
+    padding: 20px;
+}
+
+.card__list
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 5px;
+    color: var(--Neutral_200);
+    margin-bottom: 20px;
+}
+
+.card__list__img
+{
+
+}
+
+.card__list__descripcion
+{
+
+}
+
+.card__list__descripcion__h2
+{
+    font-size: 22spx;
+    margin-bottom: 5px;
+}
+
+.card__list__descripcion__p
+{
+    font-size: 16px;
+}
+
+.button__remove
+{
+    font-size: 21px;
+    color: var(--Neutral_200);
+    background-color: var(--Neutral_800);
+    border: 2px solid var(--Neutral_600);
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.attribution
+{
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a
+{
+    color: hsl(228, 45%, 44%);
+}
