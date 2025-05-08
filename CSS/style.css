@@ -99,16 +99,18 @@ body p
 .extensions__list
 {
     background-color: var(--Neutral_800);
-    border-radius: 25px;
+    border-radius: 20px;
     border: 2px solid var(--Neutral_600);
-    padding: 20px;
+    padding: 16px;
+    margin-bottom: 15px;
+    height: 200px;
 }
 
 .card__list
 {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 5px;
+    /* gap: 5px; */
     color: var(--Neutral_200);
     margin-bottom: 5px;
 }
