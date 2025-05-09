@@ -6,8 +6,9 @@ fetch("data.json")
         .then(datos =>
         {
             const card__main = document.querySelector(".card__main")
-            datos.forEach(dato =>
+            datos.forEach((dato, i) =>
             {
+                // Creación del primer div con la información de la cards
                 const extensions__list = document.createElement("div")
                 extensions__list.classList.add("extensions__list")
                 const card__list = document.createElement("div")
@@ -29,8 +30,31 @@ fetch("data.json")
                 card__list.appendChild(card__list__descripcion)
                 extensions__list.appendChild(card__list)
                 card__main.appendChild(extensions__list)
+
+                // Creación del segundo div con los botones de las cards
+                const button__check = document.createElement("div")
+                button__check.classList.add("button__check")
+                const button__check__remove = document.createElement("button")
+                button__check__remove.classList.add("button__check__remove")
+                button__check__remove.textContent = "Remove"
+                
+                const form__check = document.createElement("div")
+                form__check.classList.add("form-check", "form-switch")
+                const form__check__input = document.createElement("input")
+                form__check__input.classList.add("form-check-input")
+                form__check__input.type = "checkbox"
+                form__check__input.role = "switch"
+                form__check__input.id = `switchCheckChecked${i+1}`
+                form__check__input.checked = dato.isActive
+                
+                const form__check__label = document.createElement("label")
+                form__check__label.classList.add("form-check-label")
+                form__check__label.setAttribute("for", form__check__input.id)
+
+                button__check.appendChild(button__check__remove)
+                form__check.appendChild(form__check__input)
+                form__check.appendChild(form__check__label)
+                button__check.appendChild(form__check)
+                extensions__list.appendChild(button__check)
             });
-            // img.src = `${datos[0].logo}`
-            // h2.innerHTML = `${datos[0].name}`
-            // p.innerHTML = `${datos[0].description}`
         })
