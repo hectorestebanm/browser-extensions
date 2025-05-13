@@ -1,0 +1,12 @@
+.nav-list
+{
+    width: 375px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.active
+{
+    border-radius: 20px!important;
+    background-color: red!important;
+}

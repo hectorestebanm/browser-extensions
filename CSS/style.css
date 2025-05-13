@@ -28,7 +28,8 @@
 body
 {
     font-family: "DM Sans", sans-serif;
-    background-color: var(--Neutral_900)!important;
+    /* background-color: var(--Neutral_900)!important; */
+    background: linear-gradient(180deg,rgba(4, 9, 24, 1) 0%, rgba(9, 21, 64, 1) 100%);
     color: white;
 }
 
@@ -89,11 +90,29 @@ body p
 .button__style
 {
     font-size: 21px;
-    color: var(--Neutral_200);
-    background-color: var(--Neutral_700);
-    border: 1px solid var(--Neutral_600);
-    border-radius: 30px;
+    color: var(--Neutral_200)!important;
+    background-color: var(--Neutral_700)!important;
+    border: 1px solid var(--Neutral_600)!important;
+    border-radius: 30px!important;
     padding: 10px 20px;
+}
+
+.button__style:hover
+{
+    background-color: var(--Neutral_600)!important;
+}
+
+.active
+{
+    color: var(--Neutral_900)!important;
+    font-weight: 500!important;
+    border-radius: 20px!important;
+    background-color: var(--Red_500)!important;
+}
+
+.active:hover
+{
+    background-color: var(--Red_400)!important;
 }
 
 .extensions__list
@@ -103,7 +122,7 @@ body p
     border: 2px solid var(--Neutral_600);
     padding: 16px;
     margin-bottom: 15px;
-    height: 200px;
+    height: 215px;
 }
 
 .card__list
@@ -113,6 +132,7 @@ body p
     /* gap: 5px; */
     color: var(--Neutral_200);
     margin-bottom: 5px;
+    height: 125px;
 }
 
 .card__list__img
@@ -153,9 +173,22 @@ body p
     padding: 10px 20px;
 }
 
+.button__check__remove:hover
+{
+    color: var(--Neutral_900);
+    font-weight: 500;
+    background-color: var(--Red_500);
+}
+
 .form-check-input
 {
     font-size: 20px;
+    cursor: pointer;
+}
+
+.form-switch .form-check-input:checked
+{
+    background-color: var(--Red_400);
 }
 
 .attribution
