@@ -15,18 +15,13 @@
     <br><br>
     <h2>Nav con enlaces</h2>
     <main class="nav-list">
-        <nav class="nav nav-pills">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </nav>
         <br>
         <nav class="nav nav-pills justify-content-evenly">
-            <button class="nav-link active" aria-current="page" href="#">All</button>
-            <button class="nav-link">Active</button>
-            <button class="nav-link">Inactive</button>
+            <button class="nav-link active" data-filter="all">All</button>
+            <button class="nav-link" data-filter="active">Active</button>
+            <button class="nav-link" data-filter="inactive">Inactive</button>
         </nav>
+        <br>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
