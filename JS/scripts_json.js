@@ -4,11 +4,11 @@ const img = document.querySelector(".card__list__img")
 let jsonData = []
 let currentFilter = "all"
 
-function imprimirCards(jsonData)
+function imprimirCards(data)
 {
     const card__main = document.querySelector(".card__main")
     card__main.innerHTML = ""
-    jsonData.forEach((dato, i) =>
+    data.forEach((dato, i) =>
     {
         // Creación del primer div con la información de la cards
         const extensions__list = document.createElement("div")
@@ -54,13 +54,18 @@ function imprimirCards(jsonData)
         form__check__input.checked = dato.isActive
         form__check__input.addEventListener("change", () =>
         {
-            jsonData[i].isActive = form__check__input.checked
+            data[i].isActive = form__check__input.checked
+            // data[i].isActive = form__check__input.checked
             const filtered__data = currentFilter === "all"
-            ? jsonData
-            : jsonData.filter(item =>
-            currentFilter === "active" ? item.isActive : !item.isActive
-        );
-            imprimirCards(jsonData)
+            ? data
+            : data.filter(item =>
+            // ? jsonData
+            // : jsonData.filter(item =>
+            {
+            if (currentFilter === "active") return item.isActive === true;
+            if (currentFilter === "inactive") return item.isActive === false;
+            });
+            imprimirCards(filtered__data)
         })
         
         const form__check__label = document.createElement("label")
