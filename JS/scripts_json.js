@@ -99,6 +99,20 @@ nav__links.forEach(button =>
     })
 })
 
+const modo__button = document.querySelector(".modo__button")
+const modo__moon = document.querySelector(".modo__moon")
+modo__button.addEventListener("click", () =>
+{
+    if(modo__moon.src.includes("icon-moon.svg"))
+    {
+        modo__moon.src = "./assets/images/icon-sun.svg"
+    }
+    else
+    {
+        modo__moon.src = "./assets/images/icon-moon.svg"
+    }
+})
+
 // Mostrar las cards al inicio de la página
 fetch("data.json")
     .then(response => response.json())
